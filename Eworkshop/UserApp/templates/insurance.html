@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Insurance</h4>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr class="col-6">
+            <th>Name </th>
+            <th>image </th>
+            <th> Vehi_Number </th>
+            <th> Vehi_Type </th>
+            <th> Vehi_Model </th>
+            <th>Brand </th>
+            <th>Fuel</th>
+            <th>cc </th>
+            <th>coverage </th>
+            <th> Place </th>
+            <!-- <th> Issue Date </th>
+            <th>Expiry Date </th> -->
+            <th>Update</th>
+            <th> Delete </th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for i in ins%}
+            <tr class="col-6">
+                <th>{{i.owner}} </th>
+                <th><img src="{{i.image.url}}"> </th>
+                <th> {{i.vehicle_no}} </th>
+                <th> {{i.vehicle_type}} </th>
+                <th> {{i.vehicle_model}} </th>
+                <th> {{i.brand}} </th>
+                <th> {{i.fuel}} </th>
+                <th> {{i.cc}} </th>
+                <th> {{i.coverage}} </th>
+                <th> {{i.place}} </th>
+                <!-- <th> {{i.issue_date}} </th>
+                <th> {{i.expiry_date}} </th> -->
+                <th> <a href="{% url 'updateinsurance' insuranceid=i.id %}">update</a> </th>
+                <th> <a href="{% url 'deleteinsurance' insuranceid=i.id %}">delete</a> </th>
+              </tr>
+              {%endfor%}
+          
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

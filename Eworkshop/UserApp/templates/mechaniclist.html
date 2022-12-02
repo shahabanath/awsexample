@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Products</h4>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr class="col-6">
+            <th>Mechanic Name </th>
+            <th> Location </th>
+            <th> workshop name </th>
+            <th> Email </th>
+            <th> Phone number </th>
+            <th>DOB </th>
+            <th> gender </th>
+            <th>approve</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for i in me%}
+            <tr class="col-6">
+                <th>{{i.username}} </th>
+                <th> {{i.location}} </th>
+                <th> {{i.workshop_name}} </th>
+                <th> {{i.email}} </th>
+                <th> {{i.phonenumber}} </th>
+                <th> {{i.dob}} </th>
+                <th> {{i.gender}} </th>
+                <th> <a href="{% url 'approve' userid=i.id %}">approve</a> </th>
+               
+              </tr>
+              {%endfor%}
+          
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

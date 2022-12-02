@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stellar Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="static/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="static/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="static/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="./static/vendors/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="./static/vendors/chartist/chartist.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="./static/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="./static/images/favicon.png" >
+  </head>
+  <body>
+    <div class="container-scroller">
+     
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+       
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row purchace-popup">
+              <div class="col-12 stretch-card grid-margin">
+                <div class="card card-secondary">
+                  <span class="card-body d-lg-flex align-items-center">
+                    <section class="content-header">
+<div class="card card-4">
+    <div class="card-body">
+        <h2 class="title">Insurance Form</h2>
+        <form  action="{%url 'updateinsurance' insuranceid=id%}" method="POST">
+            {%csrf_token%}
+            <div class="row row-space">
+                <div class="col-2">
+                    <div class="input-group">
+                        <label class="label">Owner</label>
+                        <input class="input--style-4" type="text" name="owner" value={{k.owner_id}}>
+                    </div>
+                </div>
+                <div class="col-2">
+                        <div class="input-group">
+                            <label class="label">Vehicle Number</label>
+                            <input class="input--style-4" type="text" name="vehicle_no" value={{k.vehicle_no}}>
+                        </div>
+                </div>
+            </div>
+            <div class="row row-space">
+                <div class="col-2">
+                    <div class="input-group">
+                        <label class="label">Vehicle Type</label>
+                        <input class="input--style-4" type="text" name="vehicle_type" value={{k.vehicle_type}}>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-space">
+              <div class="col-2">
+                  <div class="input-group">
+                      <label class="label">Vehicle Model</label>
+                      <input class="input--style-4" type="text" name="vehicle_model" value={{k.vehicle_model}}>
+                  </div>
+              </div>
+          </div>
+            <div class="row row-space">
+                <div class="col-2">
+                    <div class="input-group">
+                        <label class="label">house name</label>
+                        <input class="input--style-4" type="text" name="house_name" value={{k.house_name}}>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="input-group">
+                        <label class="label">place</label>
+                        <input class="input--style-4" type="text" name="place" value={{k.place}}>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-space">
+                <div class="col-2">
+                    <div class="input-group">
+                        <label class="label">issue date</label>
+                        <input class="input--style-4" type="datetime-local" name="issue_date" value={{k.issue_date}}>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="input-group">
+                        <label class="label">expiry date</label>
+                        <input class="input--style-4" type="datetime-local" name="expiry_date" value={{k.expiry_date}}>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            <div class="p-t-15">
+                <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+</span>
+</div>
+</div>
+</div>
+
+
+
+<!-- content-wrapper ends -->
+<!-- partial:partials/_footer.html -->
+<footer class="footer">
+<div class="d-sm-flex justify-content-center justify-content-sm-between">
+
+</div>
+</footer>
+<!-- partial -->
+</div>
+<!-- main-panel ends -->
+</div>
+<!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="static/vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="./static/vendors/chart.js/Chart.min.js"></script>
+<script src="./static/vendors/moment/moment.min.js"></script>
+<script src="./static/vendors/daterangepicker/daterangepicker.js"></script>
+<script src="./static/vendors/chartist/chartist.min.js"></script>
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="static/js/off-canvas.js"></script>
+<script src="static/js/misc.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page -->
+<script src="./static/js/dashboard.js"></script>
+<!-- End custom js for this page -->
+</body>
+</html>
+
